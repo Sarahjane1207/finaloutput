@@ -8,10 +8,16 @@
 </head>
 <body>
     <div class="content">
-    <div style="margin-top: 50px; margin-bottom: 50px;">
-    <div id="container" class="container"></div>
+    <div id="container" class="container">
+        <a href="#" class="back-button" onclick="goBack()">Go Back</a>
+    </div>
     </div>
     <script type="module" src="./app.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     </div>
 </body>
 </html>
