@@ -1,44 +1,106 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    font-family: sans-serif;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-header{
-    background-color: black;
-    
-    padding: 1.5rem;
-    
-}
-  
-body{
-    background-color: black;
-    font-family: Arial, Impact, 'Arial Narrow Bold', sans-serif, sans-serif;
-}
-header ul{
-    display: flex;
-    gap: 1rem;
-}
-header ul li{
-    list-style-type: none;
-
-}
-
-.main{
+.banner {
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.50)),url(andrea1.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+img {
+    border-radius: 65px;
+    cursor: pointer;
+    transition: filter 0.5s; 
+}
+
+img:hover {
+    animation: spin 1s linear;
+    filter: brightness(120%);
+ 
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-flex;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: pink;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
     text-align: center;
-    padding: 10%;
-    color: white;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content h3 {
+    margin-top: center;
+    margin-bottom: -80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 .name{
-    font-size: 20px;
-}
-.title{
-    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
 
 }
-span{
-    color:yellow;
+.name:hover{
+    color: #009688;
+    text-decoration: none;
+    transform: translate(20% 20%);
 }
