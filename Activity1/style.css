@@ -105,7 +105,8 @@ ul{
     margin-bottom: 200px;
 }
 
-.btn1{
+.btn1,
+.back-button{
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
@@ -114,6 +115,13 @@ ul{
     color: black;
     font-weight: bold;
     font-size: 15px;
+}
+nav{
+    margin-top:15px;
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
 }
 
 .p2{
